@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 700px;
+    min-height: 380px;
+    background: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+    padding-bottom: 70px;
+    margin: 0 20px;
+    animation-name: escalaImagen;
+    animation-duration: 0.5s;
+}
+.container small{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    font-size: .6em;
+    margin-bottom: 20px;
+}
+.container h2{
+    text-align: center;
+    color: var(--Light-Cyan);
+    font-size: 1.35em;
+    animation-name: escalaImagen;
+    animation-duration: 0.5s;
+   
+}
+.line{
+    margin-top: 20px;
+}
+
+#btnConsejo{
+    position: absolute;
+    bottom: -35px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--Neon-Green);
+    transition: all .3s ease-out;
+    border: none;
+}
+#btnConsejo:hover{
+    box-shadow: 0 0 30px hsl(150, 100%, 66%);;
+}
+#btnConsejo img{
+    transition: all .3s ease-out;
+}
+.pattern_mobile{
+    display: none;
+}
+#btnConsejo:hover  .imgBtn{
+    background-color: var(--Dark-Blue);
+    border-radius: 3px;
+}
+
+@media (max-width:550px){
+    .container{
+        width: 370px;
+        min-height: 320px;
+    }
+    .pattern_desktop{
+        display: none;
+    }
+    .pattern_mobile{
+        display: flex;
+    }
+    .container h2{
+        font-size: .9em;
+    }
+}
+@keyframes escalaImagen{
+    0%{transform: scale(0);}
+    10%{transform: scale(0.1);}
+    20%{transform: scale(0.2);}
+    30%{transform: scale(0.3);}
+    40%{transform: scale(0.4);}
+    50%{transform: scale(0.5);}
+    60%{transform: scale(0.6);}
+    70%{transform: scale(0.7);}
+    80%{transform: scale(0.8);}
+    90%{transform: scale(0.9);}
+    100%{transform: scale(1);}
+}
